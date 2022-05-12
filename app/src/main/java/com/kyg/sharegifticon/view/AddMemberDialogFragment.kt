@@ -14,7 +14,7 @@ class AddMemberDialogFragment(private val callback: (String, String) -> Unit) :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setDialogSize(view)
+        setDialogSize()
         initEtAddMemberDialogName()
         initEtAddMemberDialogUid()
         initBtAddMemberConfirm(callback)

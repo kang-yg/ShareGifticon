@@ -1,16 +1,17 @@
 package com.kyg.sharegifticon.view
 
-import android.content.Context
-import android.graphics.Point
-import android.os.Build
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.DialogFragment
 
-open class BaseDialogFragment<V : ViewDataBinding>(@LayoutRes private val layoutRes: Int) : DialogFragment() {
+open class BaseDialogFragment<V : ViewDataBinding>(@LayoutRes private val layoutRes: Int) :
+    DialogFragment() {
     private lateinit var mDataBinding: V
 
     override fun onCreateView(
@@ -24,18 +25,11 @@ open class BaseDialogFragment<V : ViewDataBinding>(@LayoutRes private val layout
 
     fun getDataBinding() = this.mDataBinding
 
-    fun setDialogSize(view: View) {
-        val windowManager = view.context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
-        val deviceWith: Int = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
-            val size = Point()
-            val display: Display = windowManager.defaultDisplay
-            display.getSize(size)
-            size.x
-        } else {
-            windowManager.currentWindowMetrics.bounds.bottom
+    fun setDialogSize() {
+        val params = dialog?.window?.attributes.apply {
+            this?.width = WindowManager.LayoutParams.MATCH_PARENT
+            this?.height = WindowManager.LayoutParams.WRAP_CONTENT
         }
-        val params: WindowManager.LayoutParams? = this.dialog?.window?.attributes
-        params?.width = (deviceWith * 1).toInt()
-        this.dialog?.window?.attributes = params as WindowManager.LayoutParams
+        dialog?.window?.attributes = params
     }
 }
