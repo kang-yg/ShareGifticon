@@ -35,7 +35,7 @@ class ManageAlarmDialogFragment(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getDataBinding().manageAlarmDialogFragment = this
-        setDialogSize(view)
+        setDialogSize()
     }
 
     fun btNoAlarmClick() {
