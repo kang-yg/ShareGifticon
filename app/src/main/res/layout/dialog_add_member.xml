@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/tvAddMemberDialogName"
+                style="@style/H3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ADD_MEMBER_NAME"
+                app:layout_constraintBottom_toTopOf="@id/etAddMemberDialogName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etAddMemberDialogName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/tvAddMemberDialogUid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddMemberDialogName" />
+
+            <TextView
+                android:id="@+id/tvAddMemberDialogUid"
+                style="@style/H3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ADD_MEMBER_UID"
+                app:layout_constraintBottom_toTopOf="@id/etAddMemberDialogUid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etAddMemberDialogName" />
+
+            <EditText
+                android:id="@+id/etAddMemberDialogUid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/btAddMemberConfirm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddMemberDialogUid" />
+
+            <Button
+                android:id="@+id/btAddMemberConfirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ADD_MEMBER_CONFIRM"
+                app:layout_constraintEnd_toStartOf="@id/btAddMemberCancel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etAddMemberDialogUid" />
+
+            <Button
+                android:id="@+id/btAddMemberCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ADD_MEMBER_CANCEL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btAddMemberConfirm"
+                app:layout_constraintTop_toBottomOf="@id/etAddMemberDialogUid" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

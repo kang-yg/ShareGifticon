@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">ShareGifticon</string>
+
+    <string name="MENU">MENU</string>
+    <string name="MY_INFO">내 UID 내보내기</string>
+    <string name="DELETE_GIFTICON">삭제된 기프티콘 목록</string>
+    <string name="MANAGE_MEMBER">멤버 관리</string>
+    <string name="LOGOUT">로그아웃</string>
+
+    <string name="ADD_GIFTICON">기프티콘 등록</string>
+    <string name="ADD_PHOTO">사진 추가</string>
+    <string name="INPUT_BARCODE">바코드 입력</string>
+    <string name="READ_BARCODE">바코드 읽기</string>
+    <string name="SELECT_CATEGORY">카테고리 선택</string>
+    <string name="PICK_EXPIRATION_DATE">만기일 선택</string>
+    <string name="REGISTER">등록</string>
+    <string name="PROGRESS">진행률: </string>
+    <string name="VALIDATION_FAIL">입력 실패</string>
+
+    <string name="ADD_MEMBER_UID">코드</string>
+    <string name="ADD_MEMBER_NAME">이름</string>
+    <string name="ADD_MEMBER_CONFIRM">추가하기</string>
+    <string name="ADD_MEMBER_CANCEL">취소</string>
+
+    <string name="PERMISSION_ALERT_DIALOG_TITLE">필요 권한</string>
+    <string name="PERMISSION_ALERT_DIALOG_MESSAGE">작업을 위해 권한이 필요합니다.</string>
+    <string name="SIGNIN_ALERT_DIALOG_TITLE">로그인 실패</string>
+    <string name="SIGNIN_ALERT_DIALOG_MESSAGE">로그인 정보를 확인하세요.</string>
+    <string name="PERMISSION_ALERT_POSITIVE">확인</string>
+
+    <string name="EXPIRATION_DATE">만기일</string>
+    <string name="REGISTRANT">등록자</string>
+    <string name="DOWN_LOAD">다운로드</string>
+    <string name="DOWN_LOAD_COMPLETE">다운로드 완료</string>
+
+    <string name="ALARM_NO">알람 없음</string>
+    <string name="ALARM_ONE_DAY">D - 1</string>
+    <string name="ALARM_THREE_DAY">D - 3</string>
+    <string name="ALARM_FIVE_DAY">D - 5</string>
+    <string name="ALARM_SET">알람이 설정되었습니다.</string>
+    <string name="ALARM_SET_CANCEL">알람이 취소되었습니다.</string>
+    <string name="ALARM_NOTIFICATION_TITLE">기프티콘 만료 안내</string>
+    <string name="ALARM_NOTIFICATION_TEXT">만기일이 임박한 기프티콘이 있습니다.</string>
+
+    <string name="CATEGORY_CAFE">카페</string>
+    <string name="CATEGORY_CONVENIENCE_STORE">편의점</string>
+    <string name="CATEGORY_ETC">기타</string>
+</resources>

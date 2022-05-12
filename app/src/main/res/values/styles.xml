@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="H1" parent="MyTextView">
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:fontFamily">@font/noto_sans_cjk_kr_bold</item>
+    </style>
+
+    <style name="H2" parent="MyTextView">
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:fontFamily">@font/noto_sans_cjk_kr_bold</item>
+    </style>
+
+    <style name="H3" parent="MyTextView">
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">21dp</item>
+        <item name="android:fontFamily">@font/noto_sans_cjk_kr_bold</item>
+    </style>
+
+    <style name="Body1" parent="MyTextView">
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily">@font/noto_sans_cjk_kr_regular</item>
+    </style>
+
+    <style name="Body1_Bold" parent="MyTextView">
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/noto_sans_cjk_kr_regular</item>
+    </style>
+
+    <style name="Body2" parent="MyTextView">
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:fontFamily">@font/noto_sans_cjk_kr_regular</item>
+    </style>
+
+    <style name="MyToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">8dp</item>
+        <item name="contentInsetEnd">8dp</item>
+    </style>
+
+    <style name="MyButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:background">@drawable/button_selector</item>
+    </style>
+
+    <style name="MyEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="MyCardView" parent="CardView">
+        <item name="cardCornerRadius">5dp</item>
+        <item name="cardElevation">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+</resources>

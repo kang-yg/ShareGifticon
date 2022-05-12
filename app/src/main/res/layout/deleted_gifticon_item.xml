@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDeletedGifticon"
+        style="@style/MyCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivDeletedGifticon"
+                android:layout_width="@dimen/item_text_height_double"
+                android:layout_height="@dimen/item_text_height_double"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDeletedGifticonRegistrant"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_text_height"
+                app:layout_constraintBottom_toTopOf="@id/tvDeletedGifticonExpirationDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivDeletedGifticon"
+                app:layout_constraintTop_toTopOf="@id/ivDeletedGifticon" />
+
+            <TextView
+                android:id="@+id/tvDeletedGifticonExpirationDate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_text_height"
+                app:layout_constraintBottom_toBottomOf="@id/ivDeletedGifticon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivDeletedGifticon"
+                app:layout_constraintTop_toBottomOf="@id/tvDeletedGifticonRegistrant" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:behavior_peekHeight="@dimen/bottomsheet_handle_height"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <data>
+
+        <variable
+            name="addGifticonActivityViewModel"
+            type="com.kyg.sharegifticon.viewmodel.AddGifticonActivityViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tvAddImageTitle"
+            style="@style/H3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ADD_PHOTO"
+            app:layout_constraintBottom_toTopOf="@id/ivAddImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivAddImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_baseline_add_to_photos_24"
+            app:layout_constraintBottom_toTopOf="@id/tvAddBarcodeNumberTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddImageTitle" />
+
+        <TextView
+            android:id="@+id/tvAddBarcodeNumberTitle"
+            style="@style/H3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/INPUT_BARCODE"
+            app:layout_constraintBottom_toTopOf="@id/etAddBarcodeNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivAddImage" />
+
+        <EditText
+            android:id="@+id/etAddBarcodeNumber"
+            style="MyEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/selectCategory"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddBarcodeNumberTitle" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/selectCategory"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/SELECT_CATEGORY"
+            app:layout_constraintBottom_toTopOf="@id/btDatePicker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etAddBarcodeNumber">
+
+            <AutoCompleteTextView
+                android:id="@+id/tvSelectCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PICK_EXPIRATION_DATE"
+            app:layout_constraintBottom_toTopOf="@id/btAddGifticon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/selectCategory" />
+
+        <Button
+            android:id="@+id/btAddGifticon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/REGISTER"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btDatePicker" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

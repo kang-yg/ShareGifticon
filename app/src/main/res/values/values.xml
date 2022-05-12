@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="activity_transition_duration">250</integer>
+    <integer name="item_swipe_duration">100</integer>
+
+    <dimen name="bottomsheet_handle_height">36dp</dimen>
+    <dimen name="bottomsheet_viewpager_height">500dp</dimen>
+    <dimen name="item_text_height">50dp</dimen>
+    <dimen name="item_text_height_double">100dp</dimen>
+</resources>
