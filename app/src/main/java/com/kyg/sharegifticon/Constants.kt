@@ -29,6 +29,5 @@ object Constants {
     const val realmDatabaseName = "AlarmDB"
 
     const val mime_text = "text/plain"
-    const val mime_image = "image/jpg"
-    const val image_sffix = ".jpg"
+    const val mime_image = "image/jpeg"
 }

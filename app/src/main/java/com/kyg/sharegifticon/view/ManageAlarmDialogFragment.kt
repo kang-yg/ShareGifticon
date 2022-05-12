@@ -29,7 +29,7 @@ class ManageAlarmDialogFragment(
             activity,
             Constants.notificationIdExpirationDate,
             alarmIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT
+            PendingIntent.FLAG_IMMUTABLE
         )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
