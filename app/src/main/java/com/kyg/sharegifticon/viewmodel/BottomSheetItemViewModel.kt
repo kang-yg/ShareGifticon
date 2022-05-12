@@ -7,6 +7,7 @@ import com.kyg.sharegifticon.model.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.util.concurrent.CopyOnWriteArrayList
 
 class BottomSheetItemViewModel(
@@ -31,10 +32,12 @@ class BottomSheetItemViewModel(
 
     fun readDataFromFirebaseDatabase() {
         _itemList.value = null
-        CoroutineScope(Dispatchers.Main).launch {
+        CoroutineScope(Dispatchers.IO).launch {
             readMemberFromFirebaseDatabase()
             readGifticonKeysFromFirebaseDatabase()
-            readGifticonsFromFirebaseDatabase()
+            withContext(Dispatchers.Main) {
+                readGifticonsFromFirebaseDatabase()
+            }
         }
     }
 

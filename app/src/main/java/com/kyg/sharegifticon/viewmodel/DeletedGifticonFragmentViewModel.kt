@@ -25,7 +25,7 @@ class DeletedGifticonFragmentViewModel @Inject constructor() : BaseViewModel() {
 
     fun readDataFromFirebaseDatabase() {
         clearLists()
-        CoroutineScope(Dispatchers.Main).launch {
+        CoroutineScope(Dispatchers.IO).launch {
             readMemberFromFirebaseDatabase()
             readDeletedGifticonKey()
             readDeletedGifticon()

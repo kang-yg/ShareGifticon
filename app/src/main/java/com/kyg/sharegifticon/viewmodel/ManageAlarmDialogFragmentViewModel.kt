@@ -2,7 +2,6 @@ package com.kyg.sharegifticon.viewmodel
 
 import com.kyg.sharegifticon.Constants
 import com.kyg.sharegifticon.model.MyAlarm
-import com.kyg.sharegifticon.model.repository.MainRepository
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.absoluteValue

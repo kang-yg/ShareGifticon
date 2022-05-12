@@ -41,9 +41,7 @@ class ManageMemberActivity : ShareGifticonBaseActivity<ActivityManageMemberBindi
                 AddMemberDialogFragment { name, uID ->
                     if (name != "" && uID != "") {
                         manageMemberActivityViewModel.writeFirebaseDatabaseMemberInfo(name, uID)
-                        CoroutineScope(Dispatchers.Main).launch {
-                            readMember()
-                        }
+                        readMember()
                     } else {
                         showToast(getString(R.string.VALIDATION_FAIL))
                     }
@@ -79,9 +77,7 @@ class ManageMemberActivity : ShareGifticonBaseActivity<ActivityManageMemberBindi
                 val position = viewHolder.adapterPosition
                 val removeTargetMember = memberListAdapter.currentList[position]
                 manageMemberActivityViewModel.removeMember(removeTargetMember)
-                CoroutineScope(Dispatchers.Main).launch {
-                    readMember()
-                }
+                readMember()
             }
         }
         with(getDataBinding().rvMember) {

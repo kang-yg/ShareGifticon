@@ -26,7 +26,7 @@ class ManageMemberActivityViewModel @Inject constructor() : BaseViewModel() {
     }
 
     fun readMember() {
-        CoroutineScope(Dispatchers.Main).launch {
+        CoroutineScope(Dispatchers.IO).launch {
             readFirebaseDatabaseMemberInfo()
         }
     }
